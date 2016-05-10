@@ -1,0 +1,118 @@
+
+/****************************
+* Simple grid system for this
+* assignment supporting up to
+* 4 elements per row.
+****************************/
+
+//Row class
+.row {
+    display: block;
+    width: 100%;
+}
+
+//Generic column class
+.col {
+    width: 100%;
+    padding: 1rem;
+
+    @include mq-tablet {
+        float: left;
+    }
+}
+
+/****************************
+        TABLET COLUMNS
+****************************/
+//2 columns layout
+.tablet-1-of-2 {
+    @include mq-tablet {
+        width: 50%;
+    }
+}
+
+//3 columns layout
+.tablet-1-of-3 {
+    @include mq-tablet {
+        width: 33.333%;
+    }
+}
+
+.tablet-2-of-3 {
+    @include mq-tablet {
+        width: 66.666%;
+    }
+}
+
+//4 columns layouts
+.tablet-1-of-4 {
+    @include mq-tablet {
+        width: 25%;
+    }
+}
+
+.tablet-2-of-4 {
+    @include mq-tablet {
+        width: 50%;
+    }
+}
+
+.tablet-3-of-4 {
+    @include mq-tablet {
+        width: 75%;
+    }
+}
+
+.tablet-4-of-4 {
+    @include mq-tablet {
+        width: 100%;
+    }
+}
+
+/****************************
+        DESKTOP COLUMNS
+****************************/
+//2 columns layout
+.desktop-1-of-2 {
+    @include mq-desktop {
+        width: 50%;
+    }
+}
+
+//3 columns layout
+.desktop-1-of-3 {
+    @include mq-desktop {
+        width: 33.333%;
+    }
+}
+
+.desktop-2-of-3 {
+    @include mq-desktop {
+        width: 66.666%;
+    }
+}
+
+//4 columns layout
+.desktop-1-of-4 {
+    @include mq-desktop {
+        width: 25%;
+    }
+}
+
+.desktop-2-of-4 {
+    @include mq-desktop {
+        width: 50%;
+    }
+}
+
+.desktop-3-of-4 {
+    @include mq-desktop {
+        width: 75%;
+    }
+}
+
+.desktop-4-of-4 {
+    @include mq-desktop {
+        width: 100%;
+    }
+}

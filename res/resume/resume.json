@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
-    "picture": "",
-    "email": "john@gmail.com",
+    "name": "Francis Underwood",
+    "label": "President of the USA",
+    "picture": "../res/img/funderwood.jpeg",
+    "email": "fu@usa.gov",
     "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
-    "summary": "A summary of John Doe...",
+    "website": "https://www.fu2016.com",
+    "summary": "Frank Underwood has served the US Government, holding a variety of Governmental positions. He is currently serving as the 46th President of the USA after Walker's stepping down from the Government.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "White House",
+      "postalCode": "WA 94115",
+      "city": "Washington City",
       "countryCode": "US",
-      "region": "California"
+      "region": "Washington"
     },
     "profiles": [{
       "network": "Twitter",
@@ -21,79 +21,103 @@
     }]
   },
   "work": [{
-    "company": "Company",
+    "company": "USA Government",
     "position": "President",
-    "website": "http://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description...",
+    "website": "https://www.usa.gov",
+    "startDate": "2014-10-30",
+    "endDate": "2017-11-10",
+    "summary": "Running the US Government",
     "highlights": [
-      "Started the company"
+      "Took over the Presidency from Garrett Walker"
     ]
   }],
   "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
+    "organization": "Clear Water Initiative",
+    "position": "Charity Events - PR",
+    "website": "http://clearwaterinitiative.com/",
+    "startDate": "2012-04-16",
+    "endDate": "2013-08-12",
+    "summary": "Organized several charity events for the Clear Water Initiative, run by Claire Underwood, throughout the US",
     "highlights": [
       "Awarded 'Volunteer of the Month'"
     ]
   }],
   "education": [{
-    "institution": "University",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
+    "institution": "Harvard University",
+    "area": "Law",
+    "studyType": "Bachelor of Arts",
+    "startDate": "1982-09-26",
+    "endDate": "1986-07-10",
     "gpa": "4.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }, {
+    "institution": "The Sentinel",
+    "area": "Military Training",
+    "studyType": "Warfare Expertise Certificate",
+    "startDate": "1979-09-22",
+    "endDate": "1981-08-14",
+    "gpa": "3.7",
     "courses": [
       "DB1101 - Basic SQL"
     ]
   }],
   "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
+    "title": "Whip of the Decade",
+    "date": "2015-02-04",
+    "awarder": "US Government",
+    "summary": "For Frank Underwood's unquestionable ethos in matters concerning the legislative body of the our Nation."
   }],
   "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "website": "http://publication.com",
-    "summary": "Description..."
+    "name": "The Corridors of Power",
+    "publisher": "Greedster Publications",
+    "releaseDate": "2010-03-28",
+    "website": "http://corofpowers.com",
+    "summary": "Power, wealth, patriotism. The road to success, finding your path to the top through a reality of weakness. Our deepest desires and secretmost thoughts all explored in a semi-biographical novel by F. Underwood"
   }],
   "skills": [{
-    "name": "Web Development",
+    "name": "Legislating",
     "level": "Master",
     "keywords": [
-      "HTML",
-      "CSS",
-      "Javascript"
+      "Parliament",
+      "Education",
+      "Gun",
+      "Possession",
+      "Bill"
+    ]
+  }, {
+    "name": "Negotiating",
+    "level": "Master",
+    "keywords": [
+      "Russia",
+      "Warfare",
+      "Peace",
+      "Wealth"
     ]
   }],
   "languages": [{
-    "name": "Greek",
+    "name": "English",
     "level": "Native speaker"
   }, {
-    "name": "English",
-    "level": "Full professional proficiency"
-  }, {
-    "name": "German",
-    "level": "Limited working proficiency"
+    "name": "French",
+    "level": "Full working proficiency"
   }],
   "interests": [{
-    "name": "Wildlife",
+    "name": "Diplomacy",
     "keywords": [
-      "Ferrets",
-      "Unicorns"
+      "World peace"
     ]
-  }],
+  }, {
+    "name": "Peacekeeping",
+    "keywords": [
+      "Peace Corp",
+      "US Army"
+    ]
+  }
+],
   "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference..."
+    "name": "Garrett Walker",
+    "reference": "Frank Underwood has exhibited an exemplary political ethos, serving by my side as the Whip of US Parliament and the Vice President of the USA"
   }]
 }

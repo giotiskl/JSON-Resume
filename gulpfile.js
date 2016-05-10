@@ -7,7 +7,7 @@ var gulp    = require('gulp'),
 //Scripts task
 //Concatenates and uglifies all scripts
 gulp.task('scripts', function() {
-    gulp.src(['res/js/*.js'])
+    gulp.src(['res/js/vendor/**/*.js', 'res/js/app.js', 'res/js/*.js'])
         .pipe(plumber())
         .pipe(concat('all.js'))
         .pipe(uglify())
@@ -15,7 +15,7 @@ gulp.task('scripts', function() {
 });
 
 //SASS task
-//Compiles and uglifies all SASS files
+//Compiles and compresses all SASS files
 gulp.task('sass', function() {
     gulp.src('./res/css/styles.scss')
         .pipe(plumber())
@@ -27,8 +27,11 @@ gulp.task('sass', function() {
 //Compiles javascript and SASS on save
 gulp.task('watch', function() {
     gulp.watch('res/js/*.js', ['scripts']);
-    gulp.watch('res/css/styles.scss', ['sass']);
+    gulp.watch('res/css/**/*.scss', ['sass']);
 });
 
-//Styles task
+//Build task
+gulp.task('build', ['scripts', 'sass']);
+
+//Main task
 gulp.task('default', ['scripts', 'sass', 'watch']);

@@ -1,3 +1,31 @@
+
+/************************************************
+* For my CSS I decided to use a mix of BEM & SMACSS
+* dividing it into base/layout/modules sections.
+* However, I decided to include the component-specific
+* states in the CSS of each component and not in a
+* separate state file as SMACSS specifies.
+************************************************/
+
+//Vendor dependencies & fonts
 @import 'vendors/normalize/normalize';
-@import 'vendors/fontawesome/font-awesome';
 @import 'vendors/bourbon/bourbon';
+@import 'vendors/fontawesome/font-awesome';
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300italic,300);
+
+//Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/helpers';
+
+//Layout
+@import 'layout/layout';
+
+//Modules
+@import 'module/basics-panel';
+@import 'module/resume-section';
+
+//Misc
+//A lightweight custom grid system hacked together for this project
+@import 'vendors/yiotis-simplegrid/yiotis-simplegrid';

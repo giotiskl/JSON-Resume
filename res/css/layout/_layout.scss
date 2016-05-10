@@ -1,0 +1,18 @@
+
+//Main container
+.container {
+    box-shadow: 0 2px 5px rgba(0,0,0,.15);
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+
+//Resume section - right column
+.resume {
+    .resume-section:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .resume-section {
+        margin-top: 4rem;
+    }
+}

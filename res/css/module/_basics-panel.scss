@@ -1,0 +1,30 @@
+.basics-panel {
+    background-color: $colorLightGray;
+    border-right: 1px solid #ede1e1;
+
+    //Make the resume image responsive and centered
+    &__resume-image {
+        box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        max-height: auto;
+    }
+
+    &__full-name, &__job-title {
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &__full-name {
+        font-size: 170%;
+        margin-bottom: .5rem;
+    }
+
+    &__job-title {
+        color: $colorMain;
+        font-size: 150%;
+        margin-bottom: 2rem;
+    }
+}

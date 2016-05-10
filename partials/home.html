@@ -1,0 +1,115 @@
+<div class="container clearfix" ng-controller="resumeController">
+    <!-- Photograph & Basic Information -->
+    <section class="basics-panel col tablet-1-of-3" id="basics">
+        <div class="row">
+            <img class="basics-panel__resume-image" src="{{resumeData.basics.picture}}" alt="Frank Underwood photograph" />
+        </div>
+        <div class="row">
+            <h1 class="basics-panel__full-name">{{resumeData.basics.name}}</h1>
+        </div>
+        <div class="row">
+            <h2 class="basics-panel__job-title">{{resumeData.basics.label}}</h2>
+        </div>
+        <article class="row resume-section">
+            <h3 class="resume-section__heading">About</h3>
+            <p class="resume-section__summary">
+                {{resumeData.basics.summary}}
+            </p>
+        </article>
+        <article class="row resume-section">
+            <h3 class="resume-section__heading">Contact</h3>
+            <div class="resume-section__field-row">
+                <span class="resume-section__field-icon fa fa-phone"></span>
+                <span class="resume-section__field">
+                    {{resumeData.basics.phone}}
+                </span>
+            </div>
+            <div class="resume-section__field-row">
+                <span class="resume-section__field-icon fa fa-envelope"></span>
+                <span class="resume-section__field">
+                    <a ng-href="mailto:{{resumeData.basics.email}}">{{resumeData.basics.email}}</a>
+                </span>
+            </div>
+            <div class="resume-section__field-row">
+                <span class="resume-section__field-icon fa fa-link"></span>
+                <span class="resume-section__field">
+                    <a ng-href="{{resumeData.basics.website}}">fu2016.com</a>
+                </span>
+            </div>
+        </article>
+    </section>
+
+    <!-- Detailed Resume Information -->
+    <section class="resume col tablet-2-of-3" id="resume">
+        <!-- Work section -->
+        <section class="resume-section">
+            <div class="row col">
+                <h3 class="resume-section__heading">Work experience</h3>
+                <div class="resume-section__field-row">
+                    <span class="resume-section__field-icon fa fa-phone"></span>
+                    <span class="resume-section__field">
+                        {{resumeData.basics.phone}}
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- Education section -->
+        <section class="resume-section">
+            <div class="row col">
+                <h3 class="resume-section__heading">Education</h3>
+                <div class="resume-section__field-row">
+                    <span class="resume-section__field-icon fa fa-phone"></span>
+                    <span class="resume-section__field">
+                        {{resumeData.basics.phone}}
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- Awards & Publications section -->
+        <section class="resume-section">
+            <div class="row">
+                <div class="col tablet-2-of-4">
+                    <h3 class="resume-section__heading">Awards</h3>
+                </div>
+                <div class="col tablet-2-of-4">
+                    <h3 class="resume-section__heading">Publications</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Skills section -->
+        <section class="resume-section">
+            <div class="row col">
+                <h3 class="resume-section__heading">Skills</h3>
+                <div class="resume-section__field-row">
+                    <span class="resume-section__field-icon fa fa-phone"></span>
+                    <span class="resume-section__field">
+                        {{resumeData.basics.phone}}
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- Languages & Interests section -->
+        <section class="resume-section">
+            <div class="row">
+                <div class="col tablet-2-of-4">
+                    <h3 class="resume-section__heading">Languages</h3>
+                </div>
+                <div class="col tablet-2-of-4">
+                    <h3 class="resume-section__heading">Interests</h3>
+                </div>
+            </div>
+        </section>
+        <!-- References section -->
+        <section class="resume-section">
+            <div class="row col">
+                <h3 class="resume-section__heading">References</h3>
+                <div class="resume-section__field-row">
+                    <span class="resume-section__field-icon fa fa-phone"></span>
+                    <span class="resume-section__field">
+                        {{resumeData.basics.phone}}
+                    </span>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>

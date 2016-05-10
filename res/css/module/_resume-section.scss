@@ -1,0 +1,47 @@
+.resume-section {
+    //The heading of the section
+    &__heading {
+        border-bottom: 1px solid $colorMain;
+        color: $colorMain;
+        font-size: 130%;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    //Paragraphs with text or a description
+    &__summary {
+        line-height: 160%;
+        margin: 1rem 0;
+        font-size: 90%;
+    }
+
+    //The row containing a field consisting of a field icon &  field
+    &__field-row {
+        margin-top: 1rem;
+    }
+
+    //The field in a section
+    &__field {
+        a {
+            border-bottom: 1px solid transparent;
+            color: $colorMain;
+            transition: all .5s ease-out;
+            text-decoration: none;
+
+            &:hover {
+                border-bottom: 1px solid $colorMainDark;
+                color: $colorMainDark;
+            }
+        }
+    }
+
+    //The icon of the field in a section
+    &__field-icon {
+        background-color: $colorMain;
+        border-radius: 50%;
+        color: white;
+        font-size: 90%;
+        margin-right: 1rem;
+        padding: .5rem;
+    }
+}
