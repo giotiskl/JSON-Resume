@@ -1,5 +1,5 @@
 #JSON Resume
-This is a simple template that conforms to the [JSON resume schema](https://jsonresume.org/).
+This is a simple template that conforms to the [JSON resume schema](https://jsonresume.org/). You need to have [node](https://nodejs.org/en/) and npm installed to install all dependencies.
 
 ##Description
 This template was built using AngularJS. It includes a custom modal component using CSS animations, which can be used to display further information at some sections. Feel free to modify and/or use it in any way you like. It also uses Gulp for as a build system and all developer dependencies can be found in the package.json file.
