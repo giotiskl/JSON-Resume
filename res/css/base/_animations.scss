@@ -1,0 +1,55 @@
+
+//Slide in animation
+.scaleIn {
+    @include animation(scaleIn .5s);
+}
+
+@include keyframes(scaleIn) {
+    from {
+        @include transform(scale(0));
+    }
+    to {
+        @include transform(scale(1));
+    }
+}
+
+//Slide away animation
+.scaleOut {
+    @include animation(scaleOut .5s);
+}
+
+@include keyframes(scaleOut) {
+    from {
+        @include transform(scale(1));
+    }
+    to {
+        @include transform(scale(0));
+    }
+}
+
+//Simple fadeIn/fadeOut animation
+.fadeIn {
+    @include animation(fadeIn .5s ease-out);
+}
+
+@include keyframes(fadeIn) {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .75;
+    }
+}
+
+.fadeOut {
+    @include animation(fadeOut .5s ease-out);
+}
+
+@include keyframes(fadeOut) {
+    from {
+        opacity: .75;
+    }
+    to {
+        opacity: 0 ;
+    }
+}

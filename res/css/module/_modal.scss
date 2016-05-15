@@ -1,0 +1,83 @@
+
+//Simple modal window component
+.modal {
+    display: none;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+    position: fixed;
+    z-index: 1;
+    width: 90%;
+    //Tablet size
+    @include mq-tablet {
+        width: 70%;
+    }
+    //Desktop size
+    @include mq-desktop {
+        width: 50%;
+    }
+
+    //Container of modal header/body/footer
+    &__container {
+        border: 1px solid #ede1e1;
+        box-shadow: 0 2px 5px rgba(0,0,0,.15);
+    }
+
+    //Header of modal
+    &__header {
+        background-color: $colorLightGray;
+        border-bottom: 1px solid #ede1e1;
+        //Header heading element
+        &__title {
+            float: left;
+            font-size: 130%;
+            padding: .35rem .5rem 0 .5rem;
+        }
+        //Header close button element
+        &__xclose {
+            background-color: #ede6e6;
+            border-left: 1px solid #ede1e1;
+            border: none;
+            color: $colorMain;
+            cursor: pointer;
+            float: right;
+            font-size: 140%;
+            padding: .5rem .75rem;
+            outline: 0;
+        }
+    }
+
+    //Body of modal
+    &__body {
+        background-color: white;
+        padding: 1rem;
+    }
+
+    //Footer of modal
+    &__footer {
+        background-color: $colorLightGray;
+        border-top: 1px solid #ede1e1;
+        padding: .5rem;
+
+        .button {
+            float: right;
+        }
+    }
+
+    //Overlay of modal
+    &__overlay {
+        background-color: black;
+        left: -2000px;
+        top: -2000px;
+        width: 6000px;
+        height: 6000px;
+        opacity: .75;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+//Modal window states
+.modal--is-open {
+    display: block;
+}

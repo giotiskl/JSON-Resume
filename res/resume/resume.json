@@ -23,12 +23,33 @@
   "work": [{
     "company": "USA Government",
     "position": "President",
-    "website": "https://www.usa.gov",
+    "website": "http://www.usa.gov",
     "startDate": "2014-10-30",
     "endDate": "2017-11-10",
-    "summary": "Running the US Government",
+    "summary": "The Presidency of Frank Underwood began on October 30, 2014, when he became the 46th President of the United States, making him the second person since Gerald R. Ford to have occupied the offices of Vice President of the United States and President of the United States without having been elected to either post. Underwood will serve out the remainder of Walker's term (2014-2017), being eligible for election for one full term in November 2016 since he is serving more than half of Walker's term. He is also the first South Carolinian to occupy the White House.",
     "highlights": [
-      "Took over the Presidency from Garrett Walker"
+      "Offered Presidential pardon to former President Garrett Walker"
+    ]
+  }, {
+    "company": "USA Government",
+    "position": "Vice President",
+    "website": "http://www.usa.gov",
+    "startDate": "2013-10-30",
+    "endDate": "2014-11-10",
+    "summary": "As Vice President, Frank strongly endorsed the Military Sexual Assault bill and convinced Michael Kern, who would be later appointed Secretary of the Treasury, to help him whip the votes. President Walker resigned his presidency after his connections to China and Xander Feng were revealed. Frank was promptly sworn in as President. His first act is to renounce the asylum of Xander Feng, resulting in his deportation back to China and almost certain execution.",
+    "highlights": [
+      "Took over the Vice Presidency to allow the Vice President to run for Governor of Philadelphia."
+    ]
+  }, {
+    "company": "USA Parliament",
+    "position": "Whip of Congress",
+    "website": "http://www.usparliament.org",
+    "startDate": "2011-10-30",
+    "endDate": "2013-11-10",
+    "summary": "In charge of the government's legislative procedures, drafting and passing bills, whipping votes as the Majority Leader. In this position Frank Underwood managed to pass the controversial educational bill, which promoted tough, but much needed reforms in the field of public education in the USA. Despite a long-lasting strike on behalf of educationalists, the bill was finally enforced into law",
+    "highlights": [
+      "Passed the Education Bill under Garrett Walker's Presidency",
+      "Restructured the Peachoid"
     ]
   }],
   "volunteer": [{
@@ -37,15 +58,16 @@
     "website": "http://clearwaterinitiative.com/",
     "startDate": "2012-04-16",
     "endDate": "2013-08-12",
-    "summary": "Organized several charity events for the Clear Water Initiative, run by Claire Underwood, throughout the US",
+    "summary": "Organized several charity events for the Clear Water Initiative, run by Claire Underwood, in all of the US.",
     "highlights": [
-      "Awarded 'Volunteer of the Month'"
+      "Awarded 'Volunteer of the Month'",
+      "Gathered over 1 million $ in donations"
     ]
   }],
   "education": [{
     "institution": "Harvard University",
     "area": "Law",
-    "studyType": "Bachelor of Arts",
+    "studyType": "B.A.",
     "startDate": "1982-09-26",
     "endDate": "1986-07-10",
     "gpa": "4.0",
@@ -54,8 +76,8 @@
     ]
   }, {
     "institution": "The Sentinel",
-    "area": "Military Training",
-    "studyType": "Warfare Expertise Certificate",
+    "area": "Warfare & Military Training",
+    "studyType": "B.A.",
     "startDate": "1979-09-22",
     "endDate": "1981-08-14",
     "gpa": "3.7",
@@ -67,14 +89,14 @@
     "title": "Whip of the Decade",
     "date": "2015-02-04",
     "awarder": "US Government",
-    "summary": "For Frank Underwood's unquestionable ethos in matters concerning the legislative body of the our Nation."
+    "summary": "For Frank Underwood's unquestionable ethos in matters concerning the legislative body of our Nation."
   }],
   "publications": [{
     "name": "The Corridors of Power",
     "publisher": "Greedster Publications",
     "releaseDate": "2010-03-28",
-    "website": "http://corofpowers.com",
-    "summary": "Power, wealth, patriotism. The road to success, finding your path to the top through a reality of weakness. Our deepest desires and secretmost thoughts all explored in a semi-biographical novel by F. Underwood"
+    "website": "http://corridorsofpower.com",
+    "summary": "\"The Corridors of Power\" is a most piece of writing exploring the innermost depths and most primitive desires of human existence. The human pathos presented in all its majesty. Power, wealth, patriotism. The road to success, finding your path to the top through a reality of weakness. Our deepest desires and secretmost thoughts all explored in a semi-biographical novel by F. Underwood"
   }],
   "skills": [{
     "name": "Legislating",
@@ -106,7 +128,9 @@
   "interests": [{
     "name": "Diplomacy",
     "keywords": [
-      "World peace"
+      "World peace",
+      "United Nations",
+      "Psychology"
     ]
   }, {
     "name": "Peacekeeping",
@@ -118,6 +142,9 @@
 ],
   "references": [{
     "name": "Garrett Walker",
-    "reference": "Frank Underwood has exhibited an exemplary political ethos, serving by my side as the Whip of US Parliament and the Vice President of the USA"
+    "reference": "Frank Underwood has exhibited an exemplary political ethos, serving by my side as the Whip of US Parliament and the Vice President of the USA."
+  }, {
+    "name": "Donald Blythe",
+    "reference": "Frank Underwood has demonstrated a deep knowledge in issues regarding both education itself as well as the needs of educationalists and students alike."
   }]
 }

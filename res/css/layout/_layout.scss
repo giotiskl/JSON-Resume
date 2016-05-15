@@ -2,17 +2,44 @@
 //Main container
 .container {
     box-shadow: 0 2px 5px rgba(0,0,0,.15);
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: 1200px;
 }
 
 //Resume section - right column
 .resume {
+    //Desktop first hacky media query to achieve consistent look
+    //with basics-panel section on mobile
+    .col {
+        @media only screen and (max-width: $tablet-width) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     .resume-section:nth-child(1) {
         margin-top: 0;
     }
 
     .resume-section {
-        margin-top: 4rem;
+        @include mq-tablet {
+            margin-top: 4rem;
+        }
+
+        &__field {
+            margin-bottom: 0.5rem;
+        }
+
+        &__keyword {
+            margin: 0 .5rem 0.5rem 0;
+        }
+
+        &__highlight-list {
+            margin-left: 0.75rem;
+        }
+    }
+
+    #languages > .resume-section__field {
+        margin-top: 1rem;
     }
 }

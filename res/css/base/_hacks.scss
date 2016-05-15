@@ -1,0 +1,14 @@
+
+//Small hack to get the two panels to be the same height for tablet/desktop
+.same-height-divs {
+    @include mq-tablet {
+        overflow-y: hidden;
+    }
+
+    &__expanding {
+        @include mq-tablet {
+            height: 5000px;
+            margin-bottom: -4000px;
+        }
+    }
+}

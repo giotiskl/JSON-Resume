@@ -1,6 +1,7 @@
-<div class="container clearfix" ng-controller="resumeController">
+<div class="container clearfix same-height-divs" ng-controller="resumeController">
+
     <!-- Photograph & Basic Information -->
-    <section class="basics-panel col tablet-1-of-3" id="basics">
+    <section class="basics-panel col tablet-1-of-3 same-height-divs__expanding" id="basics" ng-="document.getElementById('basics').style.height = 5000">
         <div class="row">
             <img class="basics-panel__resume-image" src="{{resumeData.basics.picture}}" alt="Frank Underwood photograph" />
         </div>
@@ -45,34 +46,140 @@
         <section class="resume-section">
             <div class="row col">
                 <h3 class="resume-section__heading">Work experience</h3>
-                <div class="resume-section__field-row">
-                    <span class="resume-section__field-icon fa fa-phone"></span>
-                    <span class="resume-section__field">
-                        {{resumeData.basics.phone}}
-                    </span>
+
+                <div ng-repeat="work in resumeData.work">
+                    <div class="resume-section__field-row">
+                        <div class="col tablet-1-of-4">
+                            <span class="resume-section__field-year">
+                                {{getYear(work.startDate)}} &mdash; {{getYear(work.endDate)}}
+                            </span>
+                        </div>
+                        <div class="col tablet-3-of-4">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Employer:</strong> {{work.company}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Position:</strong> {{work.position}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <span class="resume-section__field-icon-small fa fa-link"></span>
+                                <span class="resume-section__field">
+                                    <a ng-href="{{work.website}}" target="_blank"> {{work.website}} </a>
+                                </span>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <button type="button" class="button" ng-click="openModal({heading: 'Job Summary', body: work.summary})">Read more</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
         <!-- Education section -->
         <section class="resume-section">
             <div class="row col">
                 <h3 class="resume-section__heading">Education</h3>
-                <div class="resume-section__field-row">
-                    <span class="resume-section__field-icon fa fa-phone"></span>
-                    <span class="resume-section__field">
-                        {{resumeData.basics.phone}}
-                    </span>
+
+                <div ng-repeat="study in resumeData.education">
+                    <div class="resume-section__field-row">
+                        <div class="col tablet-1-of-4">
+                            <span class="resume-section__field-year">
+                                {{getYear(study.startDate)}} &mdash; {{getYear(study.endDate)}}
+                            </span>
+                        </div>
+                        <div class="col tablet-3-of-4">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Field:</strong> {{study.area}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Institution:</strong> {{study.institution}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Degree:</strong> {{study.studyType}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>GPA:</strong> {{study.gpa}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Awards & Publications section -->
         <section class="resume-section">
             <div class="row">
+                <!-- Awards subsection -->
                 <div class="col tablet-2-of-4">
                     <h3 class="resume-section__heading">Awards</h3>
+                    <div ng-repeat="award in resumeData.awards">
+                        <div class="resume-section__field-row">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Title:</strong> {{award.title}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Awarder:</strong> {{award.awarder}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Date:</strong> {{award.date}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Description:</strong> {{award.summary}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Publications subsection -->
                 <div class="col tablet-2-of-4">
                     <h3 class="resume-section__heading">Publications</h3>
+                    <div ng-repeat="publication in resumeData.publications">
+                        <div class="resume-section__field-row">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Name:</strong> {{publication.name}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Publisher:</strong> {{publication.position}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Released:</strong> {{publication.releaseDate}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <span class="resume-section__field-icon-small fa fa-link"></span>
+                                <span class="resume-section__field">
+                                    <a ng-href="{{publication.website}}" target="_blank"> {{publication.website}} </a>
+                                </span>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <button type="button" class="button" ng-click="openModal({heading: 'Publication Summary', body: publication.summary})">Plot</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,22 +187,102 @@
         <section class="resume-section">
             <div class="row col">
                 <h3 class="resume-section__heading">Skills</h3>
-                <div class="resume-section__field-row">
-                    <span class="resume-section__field-icon fa fa-phone"></span>
-                    <span class="resume-section__field">
-                        {{resumeData.basics.phone}}
-                    </span>
+                <div ng-repeat="skill in resumeData.skills">
+                    <div class="resume-section__field-row">
+                        <div class="row resume-section__field">
+                            <p>
+                                <strong>Name:</strong> {{skill.name}}
+                            </p>
+                        </div>
+                        <div class="row resume-section__field">
+                            <p>
+                                <strong>Level:</strong> {{skill.level}}
+                            </p>
+                        </div>
+                        <div class="row resume-section__field">
+                            <strong>Keywords: </strong>
+                            <div class="resume-section__keyword" ng-repeat="keyword in skill.keywords">{{keyword}}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Languages & Interests section -->
         <section class="resume-section">
             <div class="row">
-                <div class="col tablet-2-of-4">
+                <!-- Languages section -->
+                <div class="col tablet-2-of-4" id="languages">
                     <h3 class="resume-section__heading">Languages</h3>
+                    <div class="row resume-section__field" ng-repeat="language in resumeData.languages">
+                        <p>
+                            <strong>{{language.name}}</strong> &mdash; {{language.level}}
+                        </p>
+                    </div>
                 </div>
-                <div class="col tablet-2-of-4">
+                <!-- Interests section -->
+                <div class="col tablet-2-of-4" id="interests">
                     <h3 class="resume-section__heading">Interests</h3>
+                    <div ng-repeat="interest in resumeData.interests">
+                        <div class="resume-section__field-row">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Name:</strong> {{interest.name}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <strong>Keywords: </strong>
+                                <div class="resume-section__keyword" ng-repeat="keyword in interest.keywords">{{keyword}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Volunteer section -->
+        <section class="resume-section">
+            <div class="row col">
+                <h3 class="resume-section__heading">Volunteering</h3>
+                <div ng-repeat="volunteer in resumeData.volunteer">
+                    <div class="resume-section__field-row">
+                        <div class="col tablet-1-of-4">
+                            <span class="resume-section__field-year">
+                                {{getYear(volunteer.startDate)}} &mdash; {{getYear(volunteer.endDate)}}
+                            </span>
+                        </div>
+                        <div class="col tablet-3-of-4">
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Organization:</strong> {{volunteer.organization}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <p>
+                                    <strong>Position:</strong> {{volunteer.position}}
+                                </p>
+                            </div>
+                            <div class="row resume-section__field">
+                                <div class="clearfix">
+                                    <p class="float-left">
+                                        <strong>Highlights:</strong>
+                                    </p>
+                                    <ul class="resume-section__highlight-list float-left">
+                                        <li ng-repeat="highlight in volunteer.highlights">
+                                            <strong>&mdash;</strong> {{highlight}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <span class="resume-section__field-icon-small fa fa-link"></span>
+                                <span class="resume-section__field">
+                                    <a ng-href="{{volunteer.website}}" target="_blank"> {{volunteer.website}} </a>
+                                </span>
+                            </div>
+                            <div class="row resume-section__field-row">
+                                <button type="button" class="button" ng-click="openModal({heading: 'Volunteering Experience', body: volunteer.summary})">Read more</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,13 +290,39 @@
         <section class="resume-section">
             <div class="row col">
                 <h3 class="resume-section__heading">References</h3>
-                <div class="resume-section__field-row">
-                    <span class="resume-section__field-icon fa fa-phone"></span>
-                    <span class="resume-section__field">
-                        {{resumeData.basics.phone}}
-                    </span>
+                <div ng-repeat="reference in resumeData.references">
+                    <div class="resume-section__field-row">
+                        <div class="row resume-section__field">
+                            <p>
+                                <strong>Name:</strong> {{reference.name}}
+                            </p>
+                        </div>
+                        <div class="row resume-section__field-row">
+                            <button type="button" class="button" ng-click="openModal({heading: 'Reference &mdash; ' + reference.name, body: reference.reference})">Reference Letter</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
+
+    <!-- Modal Component -->
+    <div class="modal" id="modal">
+        <section class="modal__container" id="modal__container">
+            <header class="modal__header clearfix">
+                <h2 class="modal__header__title">{{modalContent.heading}}</h2>
+                <button type="button" class="fa fa-times modal__header__xclose" ng-click="closeModal()"></button>
+            </header>
+            <section class="modal__body">
+                <p>
+                    {{modalContent.body}}
+                </p>
+            </section>
+            <footer class="modal__footer clearfix">
+                <button type="button" class="button" ng-click="closeModal()">OK</button>
+            </footer>
+        </section>
+        <div class="modal__overlay" id="modal__overlay" ng-click="closeModal()"></div>
+    </div>
+
 </div>
