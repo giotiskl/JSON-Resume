@@ -1,6 +1,7 @@
 
 //Main container
 .container {
+    background-color: $colorLightGray;
     box-shadow: 0 2px 5px rgba(0,0,0,.15);
     margin: 0 auto;
     max-width: 1200px;
@@ -9,6 +10,12 @@
 //Resume section (right column)
 .resume {
     background-color: white;
+    border-top: 1px solid $colorPinkGray;
+
+    @include mq-tablet {
+        border-top: none;
+        border-left: 1px solid $colorPinkGray;
+    }
 
     //Desktop first hacky media query to achieve consistent look
     //with basics-panel section on mobile
