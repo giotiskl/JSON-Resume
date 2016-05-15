@@ -19,14 +19,14 @@
 
     //Container of modal header/body/footer
     &__container {
-        border: 1px solid #ede1e1;
+        border: 1px solid $colorPinkGray;
         box-shadow: 0 2px 5px rgba(0,0,0,.15);
     }
 
     //Header of modal
     &__header {
         background-color: $colorLightGray;
-        border-bottom: 1px solid #ede1e1;
+        border-bottom: 1px solid $colorPinkGray;
         //Header heading element
         &__title {
             float: left;
@@ -35,8 +35,8 @@
         }
         //Header close button element
         &__xclose {
-            background-color: #ede6e6;
-            border-left: 1px solid #ede1e1;
+            background-color: $colorPinkGrayDark;
+            border-left: 1px solid $colorPinkGray;
             border: none;
             color: $colorMain;
             cursor: pointer;
@@ -56,7 +56,7 @@
     //Footer of modal
     &__footer {
         background-color: $colorLightGray;
-        border-top: 1px solid #ede1e1;
+        border-top: 1px solid $colorPinkGray;
         padding: .5rem;
 
         .button {

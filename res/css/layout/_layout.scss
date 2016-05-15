@@ -6,8 +6,10 @@
     max-width: 1200px;
 }
 
-//Resume section - right column
+//Resume section (right column)
 .resume {
+    background-color: white;
+
     //Desktop first hacky media query to achieve consistent look
     //with basics-panel section on mobile
     .col {
