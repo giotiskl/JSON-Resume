@@ -14,7 +14,6 @@ myApp.controller('resumeController', ['$scope', '$log', 'resumeService', functio
         //Success
         function(res) {
             resumeService.resumeData = $scope.resumeData = res.data;
-            console.log($scope.resumeData);
         },
         //Failure
         function(res) {
