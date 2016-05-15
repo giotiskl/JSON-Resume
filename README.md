@@ -9,7 +9,7 @@ You can build and run this theme by doing the following simple steps:
  1. Download and extract the master branch of the repository by clicking [here](https://github.com/giotiskl/JSON-Resume/archive/master.zip).
  2. Install all development dependencies by opening the command line in the project root folder and running the command ````npm install````.
  3. Make sure you have Gulp globally installed (````npm install --global gulp-cli````) and then run the following task in the command line to build the project files in the project's root folder: ````gulp build````.
- 4. Finally, to view the template you will have to run lite-server. Lite-server is installed as a development dependency so all you need to do is run ````npm run start```` in the command line.
+ 4. Finally, to view the template you will have to run lite-server. Lite-server is installed as a development dependency so all you need to do is run ````npm start```` in the command line.
 Enjoy!
 
 ##Browser support
